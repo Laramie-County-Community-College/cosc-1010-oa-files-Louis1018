@@ -16,10 +16,15 @@ filename = input("Enter the filename to read: ")
 
 # --- MODIFY THE CODE BELOW ---
 # Add a try...except block to handle a FileNotFoundError
+try:
+    file = open(filename, "r")
+    content = file.read()
+    file.close()
+except FileNotFoundError:
+    print("The file could not be found")
+except Exception as err:
+    print(err)
 
-file = open(filename, "r")
-content = file.read()
-file.close()
 
 print("\n--- File Content ---")
 print(content)
