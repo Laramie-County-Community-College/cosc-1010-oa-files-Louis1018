@@ -27,7 +27,7 @@ Questions:
 """
 
 # Change the mode below from "w" to "a" after the second run
-file = open("log.txt", "w")
+file = open("log.txt", "a")
 
 file.write("New entry.\n")
 
